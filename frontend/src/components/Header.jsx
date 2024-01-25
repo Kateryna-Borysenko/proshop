@@ -61,7 +61,7 @@ const Header = () => {
                   </NavDropdown>
                 </>
               ) : (
-                <LinkContainer to='/login'>
+                <LinkContainer to='/auth'>
                   <Nav.Link>
                     <FaUser /> Sign In
                   </Nav.Link>
