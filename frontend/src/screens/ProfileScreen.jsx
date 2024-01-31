@@ -65,7 +65,6 @@ const ProfileScreen = () => {
               onChange={(e) => setName(e.target.value)}
             ></Form.Control>
           </Form.Group>
-
           <Form.Group className='my-2' controlId='email'>
             <Form.Label>Email Address</Form.Label>
             <Form.Control
@@ -75,7 +74,6 @@ const ProfileScreen = () => {
               onChange={(e) => setEmail(e.target.value)}
             ></Form.Control>
           </Form.Group>
-
           <Form.Group className='my-2' controlId='password'>
             <Form.Label>Password</Form.Label>
             <Form.Control
@@ -85,7 +83,6 @@ const ProfileScreen = () => {
               onChange={(e) => setPassword(e.target.value)}
             ></Form.Control>
           </Form.Group>
-
           <Form.Group className='my-2' controlId='confirmPassword'>
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control
@@ -95,14 +92,10 @@ const ProfileScreen = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             ></Form.Control>
           </Form.Group>
-
-          <Button
-            type='submit'
-            variant='primary'
-            disabled={loadingUpdateProfile}
-          >
-            {loadingUpdateProfile ? 'Updating...' : 'Update'}
+          <Button type='submit' variant='primary'>
+            Update
           </Button>
+          {loadingUpdateProfile && <Loader />}
         </Form>
       </Col>
       <Col md={9}>
