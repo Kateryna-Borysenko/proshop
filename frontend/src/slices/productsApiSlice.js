@@ -43,7 +43,7 @@ export const productSlice = apiSlice.injectEndpoints({
         url: `${PRODUCTS_URL}/${productId}`,
         method: 'DELETE',
       }),
-      // providesTags: ['Product'],
+      providesTags: ['Product'],
     }),
     createReview: builder.mutation({
       query: (data) => ({
