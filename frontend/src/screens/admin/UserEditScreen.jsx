@@ -55,6 +55,8 @@ const UserEditScreen = () => {
       </Link>
       <FormContainer>
         <h1>Edit User</h1>
+        {loadingUpdate && <Loader />}
+
         {isLoading ? (
           <Loader />
         ) : error ? (
