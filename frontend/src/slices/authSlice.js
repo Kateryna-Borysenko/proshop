@@ -7,21 +7,16 @@ const initialState = {
 };
 
 const authSlice = createSlice({
-  name: 'auth',
+  name: "auth",
   initialState,
   reducers: {
     setCredentials: (state, action) => {
       state.userInfo = action.payload;
-      localStorage.setItem('userInfo', JSON.stringify(action.payload));
-      localStorage.setItem('userInfo', JSON.stringify(action.payload));
-
-      const expirationTime = new Date().getTime() + 60 * 60 * 1000; // 1 hour
-      // const expirationTime = new Date().getTime() + 60 * 1000; // 1 minute (for testing)
-      localStorage.setItem('expirationTime', expirationTime);
+      localStorage.setItem("userInfo", JSON.stringify(action.payload));
     },
-    logout: (state, action) => {
+    logout: (state) => {
       state.userInfo = null;
-      localStorage.removeItem('userInfo');
+      localStorage.clear();
     },
   },
 });
