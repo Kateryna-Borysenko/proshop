@@ -56,6 +56,16 @@
 
 ## Usage
 
+```
+Sample User Logins
+
+Email: admin@email.com (Admin)
+Password: 123456
+
+Email: customer@email.com (Customer)
+Password: 123456
+```
+
 - Create a MongoDB database and obtain your `MongoDB URI` - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register)
 - Create a PayPal account and obtain your `Client ID` - [PayPal Developer](https://developer.paypal.com/)
 
@@ -96,15 +106,3 @@ npm run data:import
 # Destroy data
 npm run data:destroy
 ```
-
-```
-Sample User Logins
-
-Email: admin@email.com (Admin)
-Password: 123456
-
-Email: customer@email.com (Customer)
-Password: 123456
-```
-
----
